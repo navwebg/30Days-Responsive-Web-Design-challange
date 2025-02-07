@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+body,html{
+    width: 100%;
+    height:100%;
+    background-color: grey;
+    background:url(https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    height:89px ;
+    background-color:#541494;
+}
+
+img{
+    filter:invert();
+    width: 60px;
+    margin-left: 30px;
+    margin-top: 13px;
+    cursor: pointer;
+    transition: filter .1s ease-in;
+}
+img:hover{
+    filter: invert(0);
+}
+ul{
+    list-style: none;
+    margin-right: 30px;
+    float: right;
+    line-height: 80px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 22px;
+    text-transform: capitalize;
+    padding: 8px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border .2s ease-in;
+}
+
+ul li a:hover{
+    /* color: black; */
+    border: 2px solid black;
+}
+#check{
+    display: none;
+}
+#checkbtn{
+    float: right;
+    display: none;
+    line-height: 80px;
+    margin-right: 40px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: color .2s ease-in;
+}
+#checkbtn:hover{
+    color: black;
+}
+#check:checked~ul{
+    left: 0;
+}
+
+main{
+    height: 70vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main h1 {
+    color: white;
+    font-size: 100px;
+    text-transform: capitalize;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: .5px rgb(0, 0, 0); /* Adds outline to text */
+}
+main p{
+    width: 70%; 
+    font-size: 20px;
+    text-align: center; 
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+}
+main .btn button{
+    margin: 0 10px;
+    padding: 15px 40px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background-color: #541494;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: background-color .2s ease-in, color .2s ease-in, border .2s ease-in;
+}
+main .btn button:hover{
+    background-color: #541494c5;
+    color: white;
+    border: 1px solid white;
+}
+@media(max-width:800px){
+    img{
+        margin-left: 25px;
+        width: 55px;
+    }
+    ul{
+        width: 100%;
+        height: 100vh;
+        background-color:#541494;
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        transition: .5s;
+    }
+    ul li{
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 20px;
+    }
+    #checkbtn{
+        display: block;
+    }
+
+    main{
+        height: 90vh;
+    }
+
+    main h1{
+        font-size: 80px;
+    }
+    main p{
+        font-size: 17px;
+        width: 90%;
+        /* background-color: red;  */
+    }
+    main .btn button{
+        padding: 10px 30px;
+        font-size: 17px;
+    }
+}
