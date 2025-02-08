@@ -21,10 +21,10 @@ nav{
 }
 
 img{
-    filter:invert();
     width: 60px;
     margin-left: 30px;
     margin-top: 13px;
+    filter:invert();
     cursor: pointer;
     transition: filter .1s ease-in;
 }
@@ -137,6 +137,7 @@ main .btn button:hover{
         text-align: center;
         line-height: 50px;
         margin-top: 20px;
+        
     }
     #checkbtn{
         display: block;
